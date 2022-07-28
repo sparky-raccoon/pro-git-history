@@ -1,0 +1,31 @@
+{
+  "name": "@sparky-raccoon/pro-git-history",
+  "version": "1.0.0",
+  "description": "A script to replicate  professional / private contributions as empty commits.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "fill": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparky-raccoon/pro-git-history.git"
+  },
+  "keywords": [
+    "git",
+    "history",
+    "contributions",
+    "private"
+  ],
+  "author": "Andrea Saez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparky-raccoon/pro-git-history/issues"
+  },
+  "homepage": "https://github.com/sparky-raccoon/pro-git-history#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "node-fetch": "^3.2.9",
+    "simple-git": "^3.10.0"
+  }
+}
