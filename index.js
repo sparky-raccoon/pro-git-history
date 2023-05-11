@@ -30,13 +30,13 @@ const main = async () => {
     const otherGitLog = await otherGit.log();
     const allOtherCommits = otherGitLog?.all;
 
-    let otherCommitIndex = allOtherCommits.length - 1;
+    let otherCommitIndex = 0;
     while (
-      otherCommitIndex >= 0 &&
+      otherCommitIndex <= allOtherCommits.length &&
       Date.parse(allOtherCommits[otherCommitIndex].date) > lastCommitDateMs
     ) {
       contributionsToMirror.push(allOtherCommits[otherCommitIndex].date);
-      otherCommitIndex--;
+      otherCommitIndex++;
     }
   } else {
     if (!process.env.COMPANY || !process.env.TOKEN || !process.env.USERNAME)
@@ -117,6 +117,7 @@ const main = async () => {
     });
   };
 
+  contributionsToMirror.reverse();
   for (let i = 0; i < contributionsToMirror.length; i++) {
     await commit(contributionsToMirror[i]);
   }
