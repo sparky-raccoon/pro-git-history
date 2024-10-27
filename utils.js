@@ -9,19 +9,13 @@ const getContributions = async (githubUrl, token, username) => {
   const body = {
     query: `query {
             user(login: "${username}") {
-              name
               contributionsCollection {
                 contributionCalendar {
-                  colors
-                  totalContributions
                   weeks {
                     contributionDays {
-                      color
                       contributionCount
                       date
-                      weekday
                     }
-                    firstDay
                   }
                 }
               }
