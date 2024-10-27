@@ -42,7 +42,6 @@ const main = async () => {
     if (!process.env.COMPANY || !process.env.TOKEN || !process.env.USERNAME)
       return;
     const res = await getContributions(
-      process.env.COMPANY,
       process.env.TOKEN,
       process.env.USERNAME
     );

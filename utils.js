@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 const contributionCommitMessage = "history: has contributed to a private repo.";
 
-const getContributions = async (githubUrl, token, username) => {
+const getContributions = async (token, username) => {
   const headers = {
     Authorization: `bearer ${token}`,
   };
@@ -22,7 +22,7 @@ const getContributions = async (githubUrl, token, username) => {
             }
           }`,
   };
-  const response = await fetch(githubUrl, {
+  const response = await fetch('https://api.github.com/graphql', {
     method: "POST",
     body: JSON.stringify(body),
     headers: headers,
