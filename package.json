@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "local-fill": "node index.js local-main-commits",
-    "remote-fill": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

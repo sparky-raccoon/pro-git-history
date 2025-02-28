@@ -22,12 +22,11 @@ git commit -m "chore: init pro-git-history repo"
 ```
 
 A `.env` file must be set up in the root directory of the project with the following information:
-- `USERNAME`, and `TOKEN` are required when using the `remote-fill` command. These are respectively the URL, the username and the API token needed to make a call to the Github contributions API. Make sure your token has the right permissions - [user should be enough](https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28)
-- `PROJECT_PATH` is required when using the `local-fill` command. This is an absolute path to your company's locally installed project. Mind the branch you are counting commits from.
+`USERNAME`, and `TOKEN` are required when using the `remote-fill` command. These are respectively the URL, the username and the API token needed to make a call to the Github contributions API. Make sure your token has the right permissions - [user should be enough](https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28)
 
 ## Usage
 
-`local-fill` will replicate local commits from the current branch of the targeted project, while `remote-fill` will fetch contributions from the company's Github instance and transform them into 1:1 commits.
+`npm run start` will fetch contributions from the company's Github instance and transform them into 1:1 commits.
 
 Once the command has completed, you'll get either way **empty** commits with the folliwng message **"history: has contributed to a private repo."**. Their dates match the contributions / commits they replicate ☼. You can push them to your Github repository.
 
