@@ -29,8 +29,9 @@ A `.env` file must be set up in the root directory of the project with the follo
 `npm run start` will fetch contributions from the company's Github instance and transform them into 1:1 commits.
 
 Once the command has completed, you'll get either way **empty** commits with the folliwng message **"history: has contributed to a private repo."**. Their dates match the contributions / commits they replicate ☼. You can push them to your Github repository.
+This script is using Github Graph API - user.contributionsCollection. Contributions count are commits + opened PRs.
 
-☼ Since github contributions do not hold hour / minute information, the replicated commits will be set to 12:00 AM UTC.
+☼ Since github contributions do not hold hour / minute information, the replicated commits will be set to midnight.
 
 **Note that the replicated commits will be obfuscated and will not contain any information about the company or its projects**.
 
