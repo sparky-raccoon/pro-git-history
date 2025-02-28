@@ -98,7 +98,6 @@ const main = async () => {
     });
   };
 
-  contributionsToMirror.reverse();
   for (let i = 0; i < contributionsToMirror.length; i++) {
     await commit(contributionsToMirror[i]);
   }
